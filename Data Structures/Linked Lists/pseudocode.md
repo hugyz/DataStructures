@@ -13,8 +13,8 @@ Implement the following methods:
 2. Print the LL.
 3. Get value at a certain index.
 4. Add in front of the head.
-5. Basic insert.
-6. Basic delete.
+                                5. Basic insert. ???????????
+                                6. Basic delete. ??????????
 7. Add after the tail.
 8. Add at a specific index.
 9. Delete at a specific index.
