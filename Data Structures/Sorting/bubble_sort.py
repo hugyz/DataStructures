@@ -4,7 +4,7 @@ import time
 """
 Implement Bubble Sort. 
 """
-
+#constant swaps between neighbors
 # O(n^2)
 def bubble_sort(arr):
     for i in range(len(arr)):
