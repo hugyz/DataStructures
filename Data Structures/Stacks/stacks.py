@@ -54,6 +54,7 @@ class Stack:
         print("Size: " + str(self.size))
 
 def main():
+    #print statments added in higher level
     s = Stack()
     node0 = Node()
     node1 = Node(1)

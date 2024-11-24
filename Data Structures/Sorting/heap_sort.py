@@ -6,7 +6,19 @@ apply max-heapsort on an unsorted arr
 O (n log n)
 """
 def heapsort_max(arr):
-    pass
+    n = len(arr)  # Length of the array
+
+    # Build max-heap
+    for i in range(n // 2 - 1, -1, -1):
+        max_heapify(arr, i, n-1)  # Pass the correct heap_size
+
+    # Extract elements from the heap one by one
+    for i in range(n - 1, 0, -1):
+        # Move current root (largest element) to the end
+        arr[0], arr[i] = arr[i], arr[0]
+        # Call max_heapify on the reduced heap
+        max_heapify(arr, 0, i-1)  # Pass the reduced heap_size
+
 
 
 """ heapsort_min (arr)
@@ -16,12 +28,23 @@ apply min-heapsort on an unsorted arr
 O (n log n)
 """
 def heapsort_min(arr):
-    pass
+    n = len(arr)  # Length of the array
 
+    # Build max-heap
+    for i in range(n // 2 - 1, -1, -1):
+        min_heapify(arr, i, n-1)  # Pass the correct heap_size
 
+    # Extract elements from the heap one by one
+    for i in range(n - 1, 0, -1):
+        # Move current root (largest element) to the end
+        arr[0], arr[i] = arr[i], arr[0]
+        # Call max_heapify on the reduced heap
+        min_heapify(arr, 0, i-1)  # Pass the reduced heap_size
+
+    arr.reverse()
 
 """ parent (pos)
-find parent of current position in heap
+find parent of current posi tion in heap
 :param pos:
 :return: parent value
 O(1)
@@ -75,7 +98,7 @@ def max_heapify(arr, pos, heap_size):
     if r <= heap_size and arr[r] > arr[largest]:
             largest = r
     # if largest isn't current, swap and recursively run 
-    if largest is not pos:
+    if largest != pos:
         swap(arr, pos, largest)
         max_heapify(arr, largest, heap_size)
 
@@ -128,7 +151,7 @@ build either a max or min heap depending on type specified
 O(n logn)
 """
 def build_heap(arr, heap_size, my_type):
-    if len(arr) is not 0:
+    if len(arr) != 0:
         # max
         if my_type == "max":
             # range end is not inclusive

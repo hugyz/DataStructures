@@ -40,8 +40,8 @@ def merge_sort(arr):
     right_half = merge_sort(arr[mid:])  # Recursively sort the right half
     
     # Merge the two sorted halves
-    return merge(left_half, right_half)
+    return merge(arr, left_half, right_half)
 
 arr = [8,2,7,6,9,3,4,1,0,5]
-merge_sort(arr, 0, len(arr)-1)
+merge_sort(arr)
 print(arr)
