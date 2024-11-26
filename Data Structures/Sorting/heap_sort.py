@@ -39,7 +39,7 @@ def heapsort_min(arr):
         # Move current root (largest element) to the end
         arr[0], arr[i] = arr[i], arr[0]
         # Call max_heapify on the reduced heap
-        min_heapify(arr, 0, i-1)  # Pass the reduced heap_size
+        min_heapify(arr, 0, i-1)  # Pass the reduced heap_size 
 
     arr.reverse()
 
