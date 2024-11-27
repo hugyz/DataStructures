@@ -42,7 +42,7 @@ def heapsort_min(arr):
         min_heapify(arr, 0, i-1)  # Pass the reduced heap_size 
 
     arr.reverse()
-
+ 
 """ parent (pos)
 find parent of current posi tion in heap
 :param pos:
