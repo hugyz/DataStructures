@@ -1,5 +1,15 @@
 # Structure
-Files Explained:
+
+Recommended Order:
+- Stacks.
+- Queues.
+- Linked Lists.
+- Binary Search Trees.
+- (Optional) Heaps.
+- Sorting.
+- Graph Traversal.
+- Dynamic Programming.
+- Greedy Algorithms.
 
 ## pseudocode.md
 All data structures will have a file ```pseudocode.md``` that explains the task to implement in code. 
